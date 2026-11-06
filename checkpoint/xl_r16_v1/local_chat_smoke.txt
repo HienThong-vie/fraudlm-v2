@@ -1,0 +1,33 @@
+Loading gpt2-xl + adapter lora_adapter.pt ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+note: gpt2-xl on the CPU needs about 6-8 GB of RAM in fp32 (3 GB with --dtype bf16) and each answer takes minutes. Use --device cuda for a live demo.
+[weights] downloading openai-community/gpt2-xl/model.safetensors -> D:\School Courses\Sem4\Concept Innovative\assignment-2\llm_ver2\checkpoint\pretrained\gpt2-xl
+[weights] loaded gpt2-xl: 1,557,611,200 parameters (torch.float32, cpu)
+[lora] rank=16 alpha=32.0 targets=('attn', 'ff'): 22,118,400 trainable of 1,579,729,600 parameters (1.40%)
+FraudLM chat | base: gpt2-xl (1558M params) | adapter: lora_adapter.pt (rank 16, alpha 32 [run_config.json], targets attn+ff, merged in fp32) | device: cpu fp32 | 600 demo applications | 154 fact lines | loaded in 1140s
+Single-turn, greedy decoding, max 200 new tokens. Type 'help' for commands, 'list' for demo ids, 'quit' to leave.
+you> explain 795470
+Application 795470 (demo, test month 6)
+  Model score: 0.7137
+  Review threshold: 0.7462 (set for a 5% false-positive rate)
+  Result: not flagged
+  Main factors:
+  - housing status: BA (raises the model score compared with a typical application)
+  - months at previous address: 27 (lowers the model score compared with a typical application)
+  - device operating system: windows (raises the model score compared with a typical application)
+  [answering from application 795470; single-turn; generating...]
+FraudLM> It was not flagged because the model score of 0.7137 stays below the review threshold of 0.7462. Housing status (BA) and device operating system (windows) raise the model score compared with a typical application, while months at previous address (27) lowers it.
+         Decision support only. Model output can be wrong.
+  [174 prompt + 57 new tokens in 21.6s]
+you> should I approve application 795470?
+FraudLM> I can't approve, reject, block or close anything. FraudLM only ranks applications for review: it explains a model score and its main factors, and the fraud analyst makes every decision. For reference, application 795470: the model score is 0.7137, below the review threshold of 0.7462, so the application is not flagged.
+         Decision support only. Model output can be wrong.
+you> what is the fraud rate in the development months?
+  [answering from 1 dataset/model fact lines: overall development-month totals; single-turn; generating...]
+FraudLM> The development months 0-5 hold 794,989 applications with 8,151 frauds, so the fraud rate is 1.03%, or about 96.5 legitimate applications for each fraud.
+         Decision support only. Model output can be wrong.
+  Facts used:
+  - months 0-5 together: 794,989 applications, 8,151 frauds, fraud rate 1.03%, about 96.5 legitimate applications per fraud
+  [130 prompt + 39 new tokens in 14.6s]
+you> quit
+FraudLM> Bye.

@@ -1,0 +1,2 @@
+# keep every file byte-exact (dataset sha256 checks); no CRLF conversion
+* -text

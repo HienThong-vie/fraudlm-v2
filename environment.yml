@@ -1,0 +1,27 @@
+# FraudLM v2 (GPT-2 + LoRA) environment. COS30049.2-1, A2 HD extra.
+# Create:   conda env create -f environment.yml
+# Activate: conda activate fraudlm2
+# CPU build by default (development and the chat demo run on CPU with gpt2-small or a merged model).
+# For an NVIDIA GPU, swap the extra index below for https://download.pytorch.org/whl/cu124 .
+# Kaggle notebooks already ship torch + CUDA; there we only pip install tiktoken (see kaggle/).
+name: fraudlm2
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas          # reads the team repo outputs and EDA tables when building the dataset
+  - matplotlib      # loss curves and evaluation figures
+  - tqdm
+  - pytest
+  - scikit-learn>=1.5,<2  # unpickles the team's frozen LR (artifacts/production_model.joblib); same range as the team repo
+  - joblib>=1.4,<2
+  - scipy
+  - pip
+  - pip:
+      # The `pytorch` conda channel stopped publishing builds, so torch comes from pip.
+      - --extra-index-url https://download.pytorch.org/whl/cpu
+      - torch>=2.2
+      - tiktoken>=0.7          # GPT-2 BPE tokenizer (D4)
+      - safetensors>=0.4       # reads the OpenAI GPT-2 weights from the HF hub
+      - huggingface_hub>=0.23  # downloads those weights; no transformers model classes in src (D3)

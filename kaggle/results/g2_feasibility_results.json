@@ -1,0 +1,181 @@
+{
+  "args": {
+    "size": "gpt2-xl",
+    "no_fallback": true,
+    "device": "cuda",
+    "modes": [
+      "fp16-base",
+      "fp32-base"
+    ],
+    "ckpt": [
+      true,
+      false
+    ],
+    "micro_batches": [
+      4,
+      8
+    ],
+    "seq_len": 512,
+    "long_seq_len": 0,
+    "steps": 10,
+    "warmup": 2,
+    "n_train": 12000,
+    "mean_tokens": 200,
+    "epochs": 2,
+    "budget_hours": 5.0,
+    "cache_dir": "/tmp/fraudlm_pretrained",
+    "out_dir": "/kaggle/working"
+  },
+  "rows": [
+    {
+      "size": "gpt2-xl",
+      "mode": "fp32-base",
+      "ckpt": true,
+      "micro_batch": 4,
+      "seq_len": 512,
+      "load_s": 46.07703137100003,
+      "sanity_loss": 2.9671623706817627,
+      "trainable": 22118400,
+      "s_per_step": 2.641239648700014,
+      "tokens_per_s": 775.3934789703769,
+      "peak_alloc_gb": 8.301825046539307,
+      "peak_reserved_gb": 10.75390625,
+      "loss_first": 0.6058781147003174,
+      "loss_last": 0.00027006203890778124,
+      "finite": true,
+      "status": "ok",
+      "projected_h": 2.175239684639009
+    },
+    {
+      "size": "gpt2-xl",
+      "mode": "fp32-base",
+      "ckpt": true,
+      "micro_batch": 8,
+      "seq_len": 512,
+      "load_s": 46.07703137100003,
+      "sanity_loss": 2.9671623706817627,
+      "trainable": 22118400,
+      "s_per_step": 5.9735142209,
+      "tokens_per_s": 685.693521188751,
+      "peak_alloc_gb": 10.263193607330322,
+      "peak_reserved_gb": 10.970703125,
+      "loss_first": 0.6058577299118042,
+      "loss_last": 0.0002703075297176838,
+      "finite": true,
+      "status": "ok",
+      "projected_h": 2.459796708801596
+    },
+    {
+      "size": "gpt2-xl",
+      "mode": "fp32-base",
+      "ckpt": false,
+      "micro_batch": 4,
+      "seq_len": 512,
+      "load_s": 46.07703137100003,
+      "sanity_loss": 2.9671623706817627,
+      "trainable": 22118400,
+      "status": "OOM"
+    },
+    {
+      "size": "gpt2-xl",
+      "mode": "fp32-base",
+      "ckpt": false,
+      "micro_batch": 8,
+      "seq_len": 512,
+      "load_s": 46.07703137100003,
+      "sanity_loss": 2.9671623706817627,
+      "trainable": 22118400,
+      "status": "OOM"
+    },
+    {
+      "size": "gpt2-xl",
+      "mode": "fp16-base",
+      "ckpt": true,
+      "micro_batch": 4,
+      "seq_len": 512,
+      "load_s": 3.972385121000002,
+      "sanity_loss": 2.9667398929595947,
+      "trainable": 22118400,
+      "s_per_step": 2.8693846630000053,
+      "tokens_per_s": 713.7418786712168,
+      "peak_alloc_gb": 5.181278705596924,
+      "peak_reserved_gb": 5.6171875,
+      "loss_first": 0.6058554649353027,
+      "loss_last": 0.0002704047074075788,
+      "finite": true,
+      "status": "ok",
+      "projected_h": 2.3631325512337282
+    },
+    {
+      "size": "gpt2-xl",
+      "mode": "fp16-base",
+      "ckpt": true,
+      "micro_batch": 8,
+      "seq_len": 512,
+      "load_s": 3.972385121000002,
+      "sanity_loss": 2.9667398929595947,
+      "trainable": 22118400,
+      "s_per_step": 5.933389879800001,
+      "tokens_per_s": 690.330499592598,
+      "peak_alloc_gb": 7.1316609382629395,
+      "peak_reserved_gb": 7.806640625,
+      "loss_first": 0.6058576107025146,
+      "loss_last": 0.0002692919224500656,
+      "finite": true,
+      "status": "ok",
+      "projected_h": 2.44327415297754
+    },
+    {
+      "size": "gpt2-xl",
+      "mode": "fp16-base",
+      "ckpt": false,
+      "micro_batch": 4,
+      "seq_len": 512,
+      "load_s": 3.972385121000002,
+      "sanity_loss": 2.9667398929595947,
+      "trainable": 22118400,
+      "status": "OOM"
+    },
+    {
+      "size": "gpt2-xl",
+      "mode": "fp16-base",
+      "ckpt": false,
+      "micro_batch": 8,
+      "seq_len": 512,
+      "load_s": 3.972385121000002,
+      "sanity_loss": 2.9667398929595947,
+      "trainable": 22118400,
+      "status": "OOM"
+    }
+  ],
+  "fp16_checks": [
+    {
+      "size": "gpt2-xl",
+      "sanity_fp32": 2.9671623706817627,
+      "sanity_fp16": 2.9667398929595947,
+      "diff": 0.00042247772216796875,
+      "fp16_ok": true,
+      "residual_dtype_fp32": "float32",
+      "residual_dtype_fp16": "float16"
+    }
+  ],
+  "recommended": {
+    "size": "gpt2-xl",
+    "mode": "fp32-base",
+    "ckpt": true,
+    "micro_batch": 4,
+    "seq_len": 512,
+    "load_s": 46.07703137100003,
+    "sanity_loss": 2.9671623706817627,
+    "trainable": 22118400,
+    "s_per_step": 2.641239648700014,
+    "tokens_per_s": 775.3934789703769,
+    "peak_alloc_gb": 8.301825046539307,
+    "peak_reserved_gb": 10.75390625,
+    "loss_first": 0.6058781147003174,
+    "loss_last": 0.00027006203890778124,
+    "finite": true,
+    "status": "ok",
+    "projected_h": 2.175239684639009
+  }
+}

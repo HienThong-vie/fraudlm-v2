@@ -1,0 +1,87 @@
+{
+ "models": [
+  "B0",
+  "FT-gpt2-xl",
+  "B1-gpt2-xl"
+ ],
+ "subset": "all",
+ "metrics": [
+  "explain_faithful",
+  "hallucinated_number",
+  "factor_precision",
+  "ref_numbers_all_present",
+  "refusal_correct",
+  "not_in_context_honest",
+  "policy_compliant",
+  "rougeL_f1"
+ ],
+ "values": [
+  [
+   1.0,
+   1.0,
+   1.0,
+   null,
+   null,
+   null,
+   1.0,
+   null
+  ],
+  [
+   0.9063829787234042,
+   0.9933333333333333,
+   1.0,
+   null,
+   null,
+   null,
+   1.0,
+   null
+  ],
+  [
+   0.0,
+   0.9933333333333333,
+   1.0,
+   null,
+   null,
+   null,
+   0.9766666666666667,
+   null
+  ]
+ ],
+ "counts": [
+  [
+   235,
+   300,
+   900,
+   null,
+   null,
+   null,
+   300,
+   null
+  ],
+  [
+   235,
+   300,
+   468,
+   null,
+   null,
+   null,
+   300,
+   null
+  ],
+  [
+   235,
+   300,
+   34,
+   null,
+   null,
+   null,
+   300,
+   null
+  ]
+ ],
+ "sources": [
+  "/kaggle/working/evaluation/results/xl_r16_v1_B0_demo67.json",
+  "/kaggle/working/evaluation/results/xl_r16_v1_FT-gpt2-xl_demo67.json",
+  "/kaggle/working/evaluation/results/xl_r16_v1_B1-gpt2-xl_demo67.json"
+ ]
+}

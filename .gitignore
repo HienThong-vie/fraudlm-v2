@@ -1,0 +1,24 @@
+# weights and run outputs are large; never commit them.
+# The trained LoRA adapter is published as a GitHub Release asset instead (see README.md).
+checkpoint/*
+!checkpoint/xl_r16_v1/
+*.pt
+*.safetensors
+*.bin
+.venv/
+__pycache__/
+.pytest_cache/
+# never commit credentials
+kaggle.json
+.env
+# local tool / session files
+.claude/
+.claude-flow/
+memory.md
+# re-creatable or duplicated data:
+# clone of the team repo, see README.md (commit d0fc662)
+preprocessed/_ml_repo/
+# public downloads, re-fetched by preprocess_data/fetch_public.py
+preprocessed/raw/
+# same JSON files as dataset/
+kaggle/datasets/

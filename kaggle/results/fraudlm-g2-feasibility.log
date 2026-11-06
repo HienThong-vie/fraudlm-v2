@@ -1,0 +1,59 @@
+[{"stream_name":"stdout","time":1.481732998,"data":"[setup] wrote 5 module files to /tmp/fraudlm_src\n"}
+,{"stream_name":"stdout","time":16.956144981,"data":"[env] python 3.13.16, torch 2.11.0+cu130, CUDA 13.0, device cuda, kaggle=True\n"}
+,{"stream_name":"stdout","time":16.956183994,"data":"[plan] projection: 12,000 examples x 2 epochs x 200 tokens (x1.15 padding, x1.1 eval); budget 5 h\n"}
+,{"stream_name":"stdout","time":16.999378852,"data":"[gpu] 2 GPU(s); using Tesla T4, 14.6 GB, compute capability 7.5\n"}
+,{"stream_name":"stdout","time":17.650766276,"data":"\n"}
+,{"stream_name":"stdout","time":17.650803478,"data":"=== gpt2-xl ===\n"}
+,{"stream_name":"stdout","time":19.75073089,"data":"[weights] downloading openai-community/gpt2-xl/model.safetensors -\u003e /tmp/fraudlm_pretrained/gpt2-xl\n"}
+,{"stream_name":"stderr","time":20.255976855,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":65.243329268,"data":"[weights] loaded gpt2-xl: 1,557,611,200 parameters (torch.float32, cuda)\n"}
+,{"stream_name":"stdout","time":65.283716381,"data":"[load] gpt2-xl fp32-base: 46 s, weights on GPU 5.94 GB, CPU peak RSS so far 6.7 GB\n"}
+,{"stream_name":"stdout","time":69.363424314,"data":"[sanity] fp32-base: loss on sample text 2.9672 | block output dtype float32 | greedy: 'Every effort moves you closer to the goal.  The goal is to be the best you'\n"}
+,{"stream_name":"stdout","time":69.541349053,"data":"[lora] rank=16 alpha=32 targets=('attn', 'ff'): 22,118,400 trainable of 1,579,729,600 parameters (1.40%)\n"}
+,{"stream_name":"stdout","time":102.213512302,"data":"  - fp32-base ckpt=on  mb=4 seq= 512 ... 2.641 s/step, 775 tok/s, peak 10.75 GB, loss 0.61-\u003e0.00, projected 2.18 h\n"}
+,{"stream_name":"stdout","time":173.075087694,"data":"  - fp32-base ckpt=on  mb=8 seq= 512 ... 5.974 s/step, 686 tok/s, peak 10.97 GB, loss 0.61-\u003e0.00, projected 2.46 h\n"}
+,{"stream_name":"stdout","time":173.898257768,"data":"  - fp32-base ckpt=off mb=4 seq= 512 ... OOM\n"}
+,{"stream_name":"stdout","time":174.68001191,"data":"  - fp32-base ckpt=off mb=8 seq= 512 ... OOM\n"}
+,{"stream_name":"stdout","time":175.102328165,"data":"[weights] using cached /tmp/fraudlm_pretrained/gpt2-xl/model.safetensors\n"}
+,{"stream_name":"stdout","time":179.041063087,"data":"[weights] loaded gpt2-xl: 1,557,611,200 parameters (torch.float16, cuda)\n"}
+,{"stream_name":"stdout","time":179.075136571,"data":"[load] gpt2-xl fp16-base: 4 s, weights on GPU 2.98 GB, CPU peak RSS so far 7.3 GB\n"}
+,{"stream_name":"stdout","time":179.860228702,"data":"[sanity] fp16-base: loss on sample text 2.9667 | block output dtype float16 | greedy: 'Every effort moves you closer to the goal.  The goal is to be the best you'\n"}
+,{"stream_name":"stdout","time":179.860269241,"data":"[fp16 check] gpt2-xl: fp32 base 2.9672 vs fp16 base 2.9667 -\u003e |diff| 0.0004 (limit 0.05) -\u003e fp16 base ACCEPTED\n"}
+,{"stream_name":"stdout","time":180.026177718,"data":"[lora] rank=16 alpha=32 targets=('attn', 'ff'): 22,118,400 trainable of 1,579,729,600 parameters (1.40%)\n"}
+,{"stream_name":"stdout","time":214.82511344,"data":"  - fp16-base ckpt=on  mb=4 seq= 512 ... 2.869 s/step, 714 tok/s, peak 5.62 GB, loss 0.61-\u003e0.00, projected 2.36 h\n"}
+,{"stream_name":"stdout","time":286.325772831,"data":"  - fp16-base ckpt=on  mb=8 seq= 512 ... 5.933 s/step, 690 tok/s, peak 7.81 GB, loss 0.61-\u003e0.00, projected 2.44 h\n"}
+,{"stream_name":"stdout","time":287.26006851,"data":"  - fp16-base ckpt=off mb=4 seq= 512 ... OOM\n"}
+,{"stream_name":"stdout","time":288.253540052,"data":"  - fp16-base ckpt=off mb=8 seq= 512 ... OOM\n"}
+,{"stream_name":"stdout","time":288.463908792,"data":"\n"}
+,{"stream_name":"stdout","time":288.463981075,"data":"====================================================================================================\n"}
+,{"stream_name":"stdout","time":288.463985527,"data":"G2 FEASIBILITY SUMMARY (copy from here to the end and send it to the lead)\n"}
+,{"stream_name":"stdout","time":288.463988125,"data":"====================================================================================================\n"}
+,{"stream_name":"stdout","time":288.463991222,"data":"GPU: Tesla T4, 14.6 GB, 2 visible; torch 2.11.0+cu130, CUDA 13.0\n"}
+,{"stream_name":"stdout","time":288.463993728,"data":"CPU peak RSS: 7.3 GB; total wall time 4.5 min\n"}
+,{"stream_name":"stdout","time":288.463996149,"data":"LoRA r=16 alpha=32 targets=('attn', 'ff'), lr 0.0002, AdamW, clip 1.0, 10 timed steps after 2 warm-up\n"}
+,{"stream_name":"stdout","time":288.464002291,"data":"Projection: 12,000 ex x 2 ep x 200 tok x1.15 pad x1.1 eval\n"}
+,{"stream_name":"stdout","time":288.464037135,"data":"\n"}
+,{"stream_name":"stdout","time":288.46404684,"data":"gpt2-xl: sanity loss fp32 base 2.9672 (block output float32), fp16 base 2.9667 (block output float16), |diff| 0.0004 -\u003e fp16 base ACCEPTED (limit 0.05)\n"}
+,{"stream_name":"stdout","time":288.464052647,"data":"LoRA trainable params: 22,118,400\n"}
+,{"stream_name":"stdout","time":288.464056393,"data":"\n"}
+,{"stream_name":"stdout","time":288.464059863,"data":"| size | base | ckpt | micro-batch | seq | status | peak GB | s/step | tokens/s | loss first-\u003elast | projected h | fits |\n"}
+,{"stream_name":"stdout","time":288.464064238,"data":"|---|---|---|---|---|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":288.464070868,"data":"| gpt2-xl | fp32-base | on | 4 | 512 | ok | 10.75 | 2.641 | 775 | 0.61-\u003e0.00 | 2.18 | yes |\n"}
+,{"stream_name":"stdout","time":288.464074621,"data":"| gpt2-xl | fp32-base | on | 8 | 512 | ok | 10.97 | 5.974 | 686 | 0.61-\u003e0.00 | 2.46 | yes |\n"}
+,{"stream_name":"stdout","time":288.46407914,"data":"| gpt2-xl | fp32-base | off | 4 | 512 | OOM | - | - | - | - | - | no |\n"}
+,{"stream_name":"stdout","time":288.46408293,"data":"| gpt2-xl | fp32-base | off | 8 | 512 | OOM | - | - | - | - | - | no |\n"}
+,{"stream_name":"stdout","time":288.46408689,"data":"| gpt2-xl | fp16-base | on | 4 | 512 | ok | 5.62 | 2.869 | 714 | 0.61-\u003e0.00 | 2.36 | yes |\n"}
+,{"stream_name":"stdout","time":288.464091495,"data":"| gpt2-xl | fp16-base | on | 8 | 512 | ok | 7.81 | 5.933 | 690 | 0.61-\u003e0.00 | 2.44 | yes |\n"}
+,{"stream_name":"stdout","time":288.464096223,"data":"| gpt2-xl | fp16-base | off | 4 | 512 | OOM | - | - | - | - | - | no |\n"}
+,{"stream_name":"stdout","time":288.46410404,"data":"| gpt2-xl | fp16-base | off | 8 | 512 | OOM | - | - | - | - | - | no |\n"}
+,{"stream_name":"stdout","time":288.464124853,"data":"\n"}
+,{"stream_name":"stdout","time":288.464129584,"data":"RECOMMENDED: gpt2-xl | base fp32-base | grad checkpointing on | micro-batch 4 at seq 512 (token budget ~2048 tokens per micro-batch) | 775 tok/s | peak 10.75 GB | projected 2.18 h -\u003e MEETS the 5 h budget\n"}
+,{"stream_name":"stdout","time":288.464139996,"data":"====================================================================================================\n"}
+,{"stream_name":"stdout","time":288.466270312,"data":"[saved] /kaggle/working/g2_feasibility_results.json\n"}
+,{"stream_name":"stderr","time":297.56191812,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":297.561948374,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":297.980819831,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":297.980852756,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":298.879338389,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":300.316714447,"data":"[NbConvertApp] Writing 438794 bytes to __results__.html\n"}
+]

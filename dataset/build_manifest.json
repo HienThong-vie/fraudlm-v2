@@ -1,0 +1,425 @@
+{
+  "args": {
+    "n_train": 12000,
+    "n_val": 500,
+    "n_test": 500,
+    "n_demo": 300,
+    "mix": ""
+  },
+  "seed": 42,
+  "tokenizer": "tiktoken gpt2",
+  "max_tokens_kept": 512,
+  "ml_scores_meta": {
+    "source": "frozen",
+    "source_note": "scores come from artifacts/production_model.joblib of the team repo (Base champion, logistic regression); the team has not yet confirmed this is the frozen A2-14 model (CLAUDE.md open decision 2)",
+    "team_repo": "https://github.com/KennyDao1324/ai4cyber-fraud",
+    "team_repo_commit": "d0fc662",
+    "artifact_sha256": "4cb8eb3bef9861aadb4d73bd36b01e7fde4aca5e1f6bdac6092ae1bb2fb61fbc",
+    "model": "logistic_regression",
+    "threshold": 0.7462441115071242,
+    "target_fpr": 0.05,
+    "model_card_test_threshold": 0.7462441115071242,
+    "reference_population": "Base months 0-4 (average applicant for the factor contributions)",
+    "dev_flag_rate_months0_5": 0.0752,
+    "dev_rows": 14000,
+    "dev_flagged": 7000,
+    "demo_rows_months6_7": 600,
+    "dev_months": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "demo_months": [
+      6,
+      7
+    ],
+    "seed": 42,
+    "top_k": 3,
+    "columns": [
+      "app_id",
+      "month",
+      "score",
+      "threshold",
+      "flagged",
+      "label",
+      "top_factors"
+    ],
+    "top_factors_keys": [
+      "feature",
+      "direction",
+      "contribution",
+      "value"
+    ],
+    "contract_extension": "top_factors items carry an extra 'value' key (raw feature value) next to feature/direction/contribution"
+  },
+  "splits": {
+    "test": {
+      "n": 500,
+      "per_task": {
+        "explain_score": 190,
+        "banking_qa": 110,
+        "policy": 65,
+        "dataset_fact": 85,
+        "general": 50
+      },
+      "per_source": {
+        "llm:claude-sonnet": 365,
+        "template": 25,
+        "bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 60,
+        "yahma/alpaca-cleaned (CC-BY-4.0)": 50
+      },
+      "per_task_source": {
+        "explain_score|llm:claude-sonnet": 178,
+        "banking_qa|llm:claude-sonnet": 50,
+        "explain_score|template": 12,
+        "policy|template": 5,
+        "dataset_fact|llm:claude-sonnet": 77,
+        "policy|llm:claude-sonnet": 60,
+        "banking_qa|bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 60,
+        "general|yahma/alpaca-cleaned (CC-BY-4.0)": 50,
+        "dataset_fact|template": 8
+      },
+      "heldout_phrasing": 200,
+      "tokens": {
+        "n": 500,
+        "min": 49,
+        "mean": 192.1,
+        "median": 215.0,
+        "p95": 273,
+        "max": 332
+      },
+      "tokens_by_task": {
+        "explain_score": {
+          "n": 190,
+          "min": 199,
+          "mean": 231.4,
+          "median": 226.0,
+          "p95": 269,
+          "max": 284
+        },
+        "dataset_fact": {
+          "n": 85,
+          "min": 154,
+          "mean": 233.7,
+          "median": 231,
+          "p95": 291,
+          "max": 332
+        },
+        "policy": {
+          "n": 65,
+          "min": 114,
+          "mean": 217.1,
+          "median": 231,
+          "p95": 268,
+          "max": 289
+        },
+        "banking_qa": {
+          "n": 110,
+          "min": 61,
+          "mean": 123.2,
+          "median": 102.5,
+          "p95": 205,
+          "max": 253
+        },
+        "general": {
+          "n": 50,
+          "min": 49,
+          "mean": 90.9,
+          "median": 86.0,
+          "p95": 139,
+          "max": 178
+        }
+      }
+    },
+    "val": {
+      "n": 500,
+      "per_task": {
+        "banking_qa": 110,
+        "dataset_fact": 85,
+        "policy": 65,
+        "explain_score": 190,
+        "general": 50
+      },
+      "per_source": {
+        "bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 97,
+        "llm:claude-sonnet": 308,
+        "template": 45,
+        "yahma/alpaca-cleaned (CC-BY-4.0)": 50
+      },
+      "per_task_source": {
+        "banking_qa|bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 97,
+        "dataset_fact|llm:claude-sonnet": 73,
+        "policy|template": 10,
+        "explain_score|llm:claude-sonnet": 167,
+        "policy|llm:claude-sonnet": 55,
+        "general|yahma/alpaca-cleaned (CC-BY-4.0)": 50,
+        "explain_score|template": 23,
+        "banking_qa|llm:claude-sonnet": 13,
+        "dataset_fact|template": 12
+      },
+      "heldout_phrasing": 0,
+      "tokens": {
+        "n": 500,
+        "min": 53,
+        "mean": 200.7,
+        "median": 217.5,
+        "p95": 275,
+        "max": 332
+      },
+      "tokens_by_task": {
+        "explain_score": {
+          "n": 190,
+          "min": 198,
+          "mean": 232.5,
+          "median": 227.0,
+          "p95": 270,
+          "max": 290
+        },
+        "dataset_fact": {
+          "n": 85,
+          "min": 150,
+          "mean": 238.0,
+          "median": 233,
+          "p95": 296,
+          "max": 332
+        },
+        "policy": {
+          "n": 65,
+          "min": 110,
+          "mean": 224.0,
+          "median": 245,
+          "p95": 275,
+          "max": 288
+        },
+        "banking_qa": {
+          "n": 110,
+          "min": 62,
+          "mean": 155.8,
+          "median": 169.5,
+          "p95": 222,
+          "max": 256
+        },
+        "general": {
+          "n": 50,
+          "min": 53,
+          "mean": 84.8,
+          "median": 73.5,
+          "p95": 135,
+          "max": 170
+        }
+      }
+    },
+    "train": {
+      "n": 12000,
+      "per_task": {
+        "dataset_fact": 2040,
+        "explain_score": 4560,
+        "policy": 1560,
+        "banking_qa": 2640,
+        "general": 1200
+      },
+      "per_source": {
+        "llm:claude-sonnet": 7235,
+        "bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 2453,
+        "template": 1112,
+        "yahma/alpaca-cleaned (CC-BY-4.0)": 1200
+      },
+      "per_task_source": {
+        "dataset_fact|llm:claude-sonnet": 1710,
+        "explain_score|llm:claude-sonnet": 3998,
+        "policy|llm:claude-sonnet": 1340,
+        "banking_qa|bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 2453,
+        "explain_score|template": 562,
+        "general|yahma/alpaca-cleaned (CC-BY-4.0)": 1200,
+        "policy|template": 220,
+        "banking_qa|llm:claude-sonnet": 187,
+        "dataset_fact|template": 330
+      },
+      "heldout_phrasing": 0,
+      "tokens": {
+        "n": 12000,
+        "min": 43,
+        "mean": 205.5,
+        "median": 220.0,
+        "p95": 275,
+        "max": 336
+      },
+      "tokens_by_task": {
+        "explain_score": {
+          "n": 4560,
+          "min": 197,
+          "mean": 232.5,
+          "median": 228.0,
+          "p95": 270,
+          "max": 294
+        },
+        "dataset_fact": {
+          "n": 2040,
+          "min": 146,
+          "mean": 241.0,
+          "median": 238.5,
+          "p95": 305,
+          "max": 336
+        },
+        "policy": {
+          "n": 1560,
+          "min": 112,
+          "mean": 242.3,
+          "median": 251.0,
+          "p95": 277,
+          "max": 302
+        },
+        "banking_qa": {
+          "n": 2640,
+          "min": 59,
+          "mean": 162.2,
+          "median": 172.0,
+          "p95": 231,
+          "max": 273
+        },
+        "general": {
+          "n": 1200,
+          "min": 43,
+          "mean": 90.0,
+          "median": 80.0,
+          "p95": 152,
+          "max": 241
+        }
+      }
+    }
+  },
+  "shortfall": {},
+  "dropped_for_length": {},
+  "files": {
+    "fraudlm_sft_test.json": {
+      "bytes": 421144,
+      "sha256": "3b9e9abc222568a72d4ad9ad3068c7bf3cf19124a9be9ef69edb22f0044de25d"
+    },
+    "fraudlm_sft_val.json": {
+      "bytes": 439410,
+      "sha256": "87526bcd9d1c07dfcee4c8ced8d23d9c761234214751c0d3b24ef52bb8fba2e9"
+    },
+    "fraudlm_sft_train.json": {
+      "bytes": 10811276,
+      "sha256": "4d7b29eef2740cd122dceddb75c04b2a544d82ba354593a265685128615cd6fd"
+    },
+    "fraudlm_demo_months67.json": {
+      "bytes": 304055,
+      "sha256": "cdb93a66a15655674d0e92826d3565f0356eaffc7f05f8cda79792dd18588d03"
+    }
+  },
+  "demo_months67": {
+    "n": 300,
+    "tokens": {
+      "n": 300,
+      "min": 197,
+      "mean": 231.9,
+      "median": 227.5,
+      "p95": 269,
+      "max": 286
+    },
+    "note": "test months 6-7 applications; demo / evaluation only, never training"
+  },
+  "bitext_filter": {
+    "raw": 25545,
+    "after_tag_W": 21816,
+    "after_length_placeholders": 5898,
+    "after_unsafe_words": 5735,
+    "after_personal_data_requests": 3991,
+    "after_dedupe": 3991,
+    "rows_per_intent": {
+      "activate_card": 12,
+      "activate_card_international_usage": 3,
+      "apply_for_loan": 139,
+      "apply_for_mortgage": 37,
+      "block_card": 68,
+      "cancel_card": 101,
+      "cancel_loan": 35,
+      "cancel_mortgage": 75,
+      "cancel_transfer": 123,
+      "check_card_annual_fee": 222,
+      "check_current_balance_on_card": 206,
+      "check_fees": 381,
+      "check_loan_payments": 401,
+      "check_mortgage_payments": 382,
+      "check_recent_transactions": 218,
+      "close_account": 173,
+      "create_account": 4,
+      "customer_service": 35,
+      "dispute_ATM_withdrawal": 59,
+      "find_ATM": 435,
+      "find_branch": 573,
+      "get_password": 3,
+      "human_agent": 231,
+      "make_transfer": 4,
+      "recover_swallowed_card": 65,
+      "set_up_password": 6
+    },
+    "returned": 2640
+  },
+  "apps_removed_for_context_overlap": {
+    "val": 90,
+    "test": 118
+  },
+  "test_outputs_equal_to_a_train_output": {
+    "val": {
+      "explain_score": 31,
+      "dataset_fact": 25,
+      "policy": 25,
+      "banking_qa": 13
+    },
+    "test": {
+      "banking_qa": 50,
+      "explain_score": 43,
+      "policy": 28,
+      "dataset_fact": 23
+    }
+  },
+  "context_diversity_train": {
+    "context_rows": 5919,
+    "distinct_factor_blocks": 1424,
+    "most_common_factors": [
+      [
+        "device operating system",
+        4208
+      ],
+      [
+        "housing status",
+        3240
+      ],
+      [
+        "months at previous address",
+        3138
+      ],
+      [
+        "keep-alive session",
+        2607
+      ],
+      [
+        "home phone valid",
+        1664
+      ],
+      [
+        "other cards held",
+        670
+      ],
+      [
+        "name-email similarity",
+        573
+      ],
+      [
+        "distinct emails on the device over 8 weeks",
+        420
+      ]
+    ],
+    "explain_score_flagged_share": 0.504,
+    "explain_score_not_flagged_all_factors_raise": 402
+  },
+  "test_factor_blocks_also_in_train": {
+    "test_context_rows": 236,
+    "also_in_train": 175
+  }
+}

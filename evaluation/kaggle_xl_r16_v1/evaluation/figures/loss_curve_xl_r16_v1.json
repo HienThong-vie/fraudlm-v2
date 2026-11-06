@@ -1,0 +1,7 @@
+{
+ "train_points": 300,
+ "val_points": 16,
+ "val_first": 2.0131,
+ "val_last": 0.3434,
+ "val_min": 0.3434
+}

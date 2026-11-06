@@ -1,0 +1,14 @@
+# pip alternative to environment.yml (Python 3.11). CPU torch:
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+numpy
+pandas
+matplotlib
+tqdm
+pytest
+scikit-learn>=1.5,<2
+joblib>=1.4,<2
+scipy
+torch>=2.2
+tiktoken>=0.7
+safetensors>=0.4
+huggingface_hub>=0.23

@@ -1,0 +1,30 @@
+feature,kind,V
+housing_status,Categorical,0.11000627779658774
+proposed_credit_limit,Numeric (deciles or levels),0.10037622721425313
+device_os,Categorical,0.07876040805444011
+credit_risk_score,Numeric (deciles or levels),0.07441320003554192
+customer_age,Numeric (deciles or levels),0.06639213712988236
+current_address_months_count,Numeric (deciles or levels),0.05653483943503493
+income,Numeric (deciles or levels),0.05316483071517614
+date_of_birth_distinct_emails_4w,Numeric (deciles or levels),0.051061391667521244
+device_distinct_emails_8w,Numeric (deciles or levels),0.049854294837276124
+keep_alive_session,Binary flag,0.048114018583613576
+prev_address_months_count,Numeric (deciles or levels),0.046955517963929806
+name_email_similarity,Numeric (deciles or levels),0.04440116360691718
+employment_status,Categorical,0.039125071659551224
+bank_months_count,Numeric (deciles or levels),0.03855197697907197
+payment_type,Categorical,0.038235604950285815
+bank_branch_count_8w,Numeric (deciles or levels),0.037701818266667415
+has_other_cards,Binary flag,0.03308622103092261
+intended_balcon_amount,Numeric (deciles or levels),0.03305298813537793
+phone_home_valid,Binary flag,0.03187593830063263
+email_is_free,Binary flag,0.026255553280507517
+days_since_request,Numeric (deciles or levels),0.02069693280580719
+velocity_4w,Numeric (deciles or levels),0.017168657343710664
+velocity_24h,Numeric (deciles or levels),0.01701308769165156
+foreign_request,Binary flag,0.015824316714800356
+velocity_6h,Numeric (deciles or levels),0.015077019781789922
+phone_mobile_valid,Binary flag,0.014984314286258371
+session_length_in_minutes,Numeric (deciles or levels),0.011807743910778863
+zip_count_4w,Numeric (deciles or levels),0.009857903658316177
+source,Categorical,0.002916127299405766

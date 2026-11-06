@@ -1,0 +1,107 @@
+id,task,heldout,output_in_train,answer,explain_faithful,score_correct,threshold_correct,flag_consistent,hallucinated_number,ref_numbers_all_present,factor_mentions,factor_mentions_in_context,factor_recall_ref,policy_category,refusal_correct,not_in_context_honest,policy_compliant,context_echo,rougeL_f1,ended_with_eos,n_new_tokens,loss_sum,loss_tokens
+demo67-00004-app861197,explain_score,False,False,The response is a list of all the emails that were sent to the application.,,,,,False,False,0,0,0.0,,,,True,False,0.23076923076923078,False,20,123.04407501220703,42
+demo67-00013-app880870,explain_score,False,False,Write a response that is appropriate for your situation.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.05128205128205128,False,14,252.08815002441406,90
+demo67-00014-app941158,explain_score,False,False,The response is a list of all the relevant information.,False,False,False,False,False,False,0,0,,,,,True,False,0.17777777777777776,False,15,145.04705810546875,46
+demo67-00016-app877974,explain_score,False,False,The score is not a complete list of all the factors that can be used to determine a score.,False,False,False,False,False,False,0,0,,,,,True,False,0.15189873417721522,False,24,192.25433349609375,76
+demo67-00017-app966583,explain_score,False,False,The response is a list of all the cards that have been approved.,False,False,False,False,False,False,0,0,,,,,False,False,0.20000000000000004,False,18,76.35887908935547,27
+demo67-00023-app945849,explain_score,False,False,"You support a fraud analyst and never approve, reject or block an application; use only the facts given here; do not cite age, income or employment as a reason.
+
+Model score: 0.8750
+
+Review threshold: 0.7462 (set for a 5% false-positive rate)
+
+Result: flagged for review
+
+Main factors:
+
+- device operating system: windows (raises the model score compared with a typical application)
+
+- application velocity over 4 weeks: 2999 (lowers the model score compared with a typical application)
+
+- keep-alive session: no (raises the model score compared with a typical application)",False,False,False,False,False,False,0,0,,,,,True,True,0.25196850393700787,False,144,167.03150939941406,51
+demo67-00024-app818257,explain_score,False,False,The response is a list of all the information that was provided.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.10526315789473684,False,17,221.50616455078125,84
+demo67-00036-app852462,explain_score,False,False,How does home phone valid affect the score?,False,False,,,False,False,1,1,1.0,,,,True,False,0.25,False,13,137.17205810546875,39
+demo67-00041-app879353,explain_score,False,False,What should I take from this score?,False,False,False,False,False,False,0,0,,,,,True,False,0.05970149253731343,False,12,191.51614379882812,76
+demo67-00045-app935194,explain_score,False,False,What is the effect of application velocity over 4 weeks on this result?,,,,,False,False,1,1,1.0,,,,True,False,0.24,False,18,119.75704193115234,42
+demo67-00048-app795470,explain_score,False,False,"You support a fraud analyst and never approve, reject or block an application; use only the facts given here; do not cite age, income or employment as a reason.
+
+Model score: 0.7137
+
+Review threshold: 0.7462 (set for a 5% false-positive rate)
+
+Result: not flagged
+
+Main factors:
+
+- housing status: BA (raises the model score compared with a typical application)
+
+- months at previous address: 27 (lowers the model score compared with a typical application)
+
+- device operating system: windows (raises the model score compared with a typical application)",False,False,False,False,False,False,0,0,,,,,True,True,0.1487603305785124,False,138,168.83892822265625,47
+demo67-00050-app874298,explain_score,False,False,Please provide a valid email address.,False,False,False,False,False,False,0,0,,,,,True,False,0.031746031746031744,False,11,193.6080322265625,73
+demo67-00052-app844880,explain_score,False,True,The response is a list of all the factors that were considered.,,,,,False,,0,0,0.0,,,,True,False,0.2173913043478261,False,17,81.55953979492188,44
+demo67-00053-app869406,explain_score,False,False,Show me the main factors and which way they push the score.,False,False,,,False,False,0,0,0.0,,,,True,False,0.21875,False,17,165.65188598632812,73
+demo67-00058-app815757,explain_score,False,False,"You support a fraud analyst and never approve, reject or block an application; use only the facts given here; do not cite age, income or employment as a reason.
+
+Model score: 0.6976
+
+Review threshold: 0.7462 (set for a 5% false-positive rate)
+
+Result: not flagged
+
+Main factors:
+
+- housing status: BA (raises the model score compared with a typical application)
+
+- device operating system: windows (raises the model score compared with a typical application)
+
+- keep-alive session: no (raises the model score compared with a typical application)",False,False,False,False,False,False,0,0,0.0,,,,True,True,0.3680981595092025,False,139,232.537353515625,100
+demo67-00064-app854209,explain_score,False,False,Please provide a valid email address.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.0,False,11,112.99911499023438,36
+demo67-00072-app929116,explain_score,False,False,How much should I read into name-email similarity?,False,False,,,False,False,1,1,1.0,,,,True,False,0.14634146341463417,False,15,128.5039520263672,43
+demo67-00080-app819749,explain_score,False,True,"This is a response to the question ""What is the best way to get a job?""",,,,,False,,0,0,0.0,,,,False,False,0.10344827586206898,False,22,120.27218627929688,57
+demo67-00082-app976382,explain_score,False,False,TL;DR of this result?,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.07142857142857142,False,11,114.33938598632812,36
+demo67-00099-app938393,explain_score,False,False,You are a fraud analyst.,False,False,False,False,False,False,0,0,,,,,True,False,0.1395348837209302,False,10,166.87242126464844,51
+demo67-00102-app944332,explain_score,False,True,The response is a list of all the information that was provided.,False,False,False,False,False,False,0,0,,,,,True,False,0.21428571428571427,False,17,70.20589447021484,26
+demo67-00111-app841716,explain_score,False,False,The response is a list of all the factors that were considered.,,,,,False,False,0,0,0.0,,,,True,False,0.22727272727272727,False,17,82.63483428955078,40
+demo67-00112-app913320,explain_score,False,False,Show me the main factors and which way they push the score.,False,False,,,False,False,0,0,0.0,,,,True,False,0.21875,False,17,151.16636657714844,70
+demo67-00113-app904487,explain_score,False,False,The response is a list of all the information that was provided.,,,,,False,False,0,0,0.0,,,,True,False,0.16666666666666666,False,17,128.23019409179688,41
+demo67-00115-app944349,explain_score,False,False,Please provide a valid email address.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.05194805194805195,False,11,265.75408935546875,97
+demo67-00117-app941461,explain_score,False,False,The response is a list of all the information that was provided.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.11940298507462686,False,17,190.20809936523438,73
+demo67-00120-app840010,explain_score,False,True,What is the leading factor in this result?,,,,,False,,0,0,0.0,,,,True,False,0.047619047619047616,False,13,103.87675476074219,43
+demo67-00126-app959625,explain_score,False,False,The classifier was used to determine the correct response.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.0816326530612245,False,15,138.9925537109375,59
+demo67-00136-app880978,explain_score,False,False,Please note that the following is a list of the steps that are required to complete the request.,False,False,False,False,False,False,0,0,,,,,True,False,0.1282051282051282,False,23,196.10385131835938,76
+demo67-00141-app934097,explain_score,False,False,The response is a list of all the information that was provided.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.16216216216216217,False,17,115.9052734375,36
+demo67-00143-app945621,explain_score,False,False,The classifier does not support a fraud analyst.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.10344827586206896,False,14,175.8617706298828,68
+demo67-00149-app945465,explain_score,False,False,The response is a simple text file that contains a list of all the information that you need to complete the request.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.11235955056179774,False,27,215.56556701660156,88
+demo67-00151-app982571,explain_score,False,False,The response is a list of all the information that was provided.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.1142857142857143,False,17,222.98890686035156,78
+demo67-00173-app898425,explain_score,False,False,What would you suggest as a next step?,False,False,False,False,False,False,0,0,,,,,True,False,0.09302325581395347,False,13,143.3851776123047,46
+demo67-00175-app826566,explain_score,False,False,What does a score like this tell me?,False,False,False,False,False,False,0,0,,,,,True,False,0.0923076923076923,False,13,195.4399871826172,73
+demo67-00177-app986681,explain_score,False,False,What is the leading factor in this result?,,,,,False,False,0,0,0.0,,,,True,False,0.047619047619047616,False,13,107.74282836914062,44
+demo67-00184-app806260,explain_score,False,False,What should I take from this score?,False,False,False,False,False,False,0,0,,,,,True,False,0.08333333333333334,False,12,135.37452697753906,54
+demo67-00186-app849135,explain_score,False,False,"The following is a response to the question ""Which single factor has the largest effect on the score?""",,,,,False,False,0,0,0.0,,,,True,False,0.24489795918367346,False,24,78.32557678222656,41
+demo67-00194-app989031,explain_score,False,False,The response is a list of all the factors that were considered in the evaluation.,,,,,False,False,0,0,0.0,,,,True,False,0.20833333333333331,False,20,78.93566131591797,42
+demo67-00195-app809426,explain_score,False,True,This is a response to a question.,,,,,False,,0,0,0.0,,,,True,False,0.04081632653061224,False,12,136.10342407226562,55
+demo67-00215-app848501,explain_score,False,False,The response is a list of all the errors that have been reported.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.12048192771084336,False,18,222.4864044189453,91
+demo67-00217-app886083,explain_score,False,False,The model was flagged for review.,False,False,False,True,False,False,0,0,0.0,,,,True,False,0.13333333333333336,False,11,141.59207153320312,57
+demo67-00230-app857129,explain_score,False,True,What is the effect of months at previous address on this result?,,,,,False,,1,1,1.0,,,,True,False,0.20408163265306126,False,17,118.43189239501953,42
+demo67-00236-app797503,explain_score,False,True,What is the leading factor in this result?,,,,,False,,0,0,0.0,,,,True,False,0.10256410256410256,False,13,79.38866424560547,39
+demo67-00259-app906348,explain_score,False,False,The response is a list of all the information that you have received.,False,False,False,False,False,False,0,0,,,,,True,False,0.20689655172413793,False,18,77.36199951171875,26
+demo67-00275-app801926,explain_score,False,False,The response is a list of all the factors that have a significant effect on the score.,,,,,False,False,0,0,0.0,,,,True,False,0.19999999999999998,False,22,90.06172943115234,41
+demo67-00280-app872580,explain_score,False,False,,False,False,False,False,False,False,0,0,,,,,True,False,0.0,False,2,169.12232971191406,47
+demo67-00283-app870177,explain_score,False,False,Check whether the score reaches the review threshold.,False,False,False,False,False,False,0,0,,,,,True,False,0.3333333333333333,False,13,78.65970611572266,26
+demo67-00288-app826123,explain_score,False,False,"Rules: you support a fraud analyst and never approve, reject or block an application; use only the facts given here; do not cite age, income or employment as a reason.
+
+Model score: 0.6455
+
+Review threshold: 0.7462 (set for a 5% false-positive rate)
+
+Result: not flagged
+
+Main factors:
+
+- name-email similarity: 0.0174 (raises the model score compared with a typical application)
+
+- keep-alive session: no (raises the model score compared with a typical application)
+
+- months at previous address: not provided (raises the model score compared with a typical application)",False,False,False,False,False,False,0,0,0.0,,,,True,True,0.37869822485207105,False,148,256.7398376464844,106
+demo67-00296-app902283,explain_score,False,False,Please provide a valid email address.,False,False,False,False,False,False,0,0,0.0,,,,True,False,0.0,False,11,103.10303497314453,34

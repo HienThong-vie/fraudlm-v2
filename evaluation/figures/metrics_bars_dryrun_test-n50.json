@@ -1,0 +1,65 @@
+{
+ "models": [
+  "B0",
+  "B1-gpt2-small"
+ ],
+ "subset": "all",
+ "metrics": [
+  "explain_faithful",
+  "hallucinated_number",
+  "factor_precision",
+  "ref_numbers_all_present",
+  "refusal_correct",
+  "not_in_context_honest",
+  "policy_compliant",
+  "rougeL_f1"
+ ],
+ "values": [
+  [
+   1.0,
+   1.0,
+   1.0,
+   0.8,
+   0.6666666666666666,
+   null,
+   1.0,
+   0.09107397764313378
+  ],
+  [
+   0.0,
+   1.0,
+   1.0,
+   0.0,
+   0.0,
+   null,
+   0.9666666666666667,
+   0.1024290472427591
+  ]
+ ],
+ "counts": [
+  [
+   15,
+   22,
+   66,
+   5,
+   3,
+   null,
+   30,
+   15
+  ],
+  [
+   15,
+   22,
+   2,
+   5,
+   3,
+   null,
+   30,
+   15
+  ]
+ ],
+ "sources": [
+  "evaluation\\results\\dryrun_B0_test-n50.json",
+  "evaluation\\results\\dryrun_B1-gpt2-small_test-n50.json"
+ ]
+}
