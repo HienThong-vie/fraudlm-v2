@@ -30,10 +30,10 @@ Without `gh`:
 Or download `lora_adapter.pt` from the Releases page and put it in `checkpoint/xl_r16_v1/`
 (next to `run_config.json`, which is already in the repo).
 
-## 3. Optional: team model card for the "model" facts
+## 3. Team classifier repo (required for the fact lines)
 
-The chat answers questions about the classifier from the team repo's model card. Without this step the chat
-still runs; it only has the dataset (EDA) facts.
+The fact lines come from the EDA tables (in this repo) plus the team model card (in Kha's repo, frozen commit
+d0fc662). Without this step the chat still starts, but it has no fact lines at all and some tests fail.
 
 ```bash
 git clone https://github.com/KennyDao1324/ai4cyber-fraud preprocessed/_ml_repo
